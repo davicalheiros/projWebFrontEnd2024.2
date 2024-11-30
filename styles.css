@@ -37,6 +37,7 @@ header{
     font-size: 20px;
     font-weight: 500;
     color: #131313;
+    text-decoration: none;
 }
 
 .header-btn:hover{
@@ -140,4 +141,96 @@ header{
 .porque-nos{
     background-color: #131313;
     height: 100vh;
+    color: #DEECE1;
+}
+
+.porque-nos-titulo{
+    width: 40%;
+    margin-left: 140px;
+    padding-top: 30px;
+}
+
+.porque-nos-titulo h2{
+    font-size: 29px;
+    margin-bottom: 30px;
+}
+
+.porque-nos-titulo h1{
+    font-size: 45px;
+    margin-bottom: 100px;
+}
+
+.porque-nos-titulo h1 span{
+    color: #73CD85;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 300px;
+    width: 274px;
+    background-color: #DEECE1;
+    display: flex;
+    border-radius: 15px;
+    color: #131313;
+    font-size: 20px;
+    font-weight: 600;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    box-shadow: #73CD85 4px 5px 5.8px;
+    
+}
+
+.card p{
+    max-width: 80%;
+}
+
+
+.material-icons{
+    font-size: 70px !important;
+    color: #4B995A;
+    align-self: center;
+    justify-self: center;
+}
+
+/*-------------------- FOOTER -------------------- */
+
+footer{
+    background-color: #1B3921;
+    color: #DEECE1;
+    height: 200px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-content ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer li{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.footer-list-title{
+    font-weight: bold;
+}
+
+.footer-logo{
+    scale: 0.7;
 }
