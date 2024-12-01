@@ -304,3 +304,58 @@ footer li {
 .footer-logo {
     scale: 0.7;
 }
+/* ----------- Página de Cadastro ----------- */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1B3921; /* Verde escuro */
+}
+
+.login-box {
+    background-color: #DEECE1; /* Verde claro */
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    color: #131313;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #73CD85;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F4F4F4;
+}
+
+.login-box input:focus {
+    border-color: #4B995A;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #131313; /* Preto */
+    color: #73CD85; /* Verde Ecovolt */
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
