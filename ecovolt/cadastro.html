@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Ecovolt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div style="display: flex; flex: 1;">
+            <img class="header-logo" src="./assets/images/Group 3.svg">
+        </div>
+        <ul class="header-btns">
+            <li>
+                <a onclick="scrollToSection('inicio')">
+                    <button class="header-btn" href="#inicio">
+                        Início
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a  onclick="scrollToSection('sobre-nos')">
+                    <button class="header-btn">
+                        Sobre Nós
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a  onclick="scrollToSection('porque-nos')">
+                    <button class="header-btn">
+                        Por que nos escolher
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="cadastro.html">
+                    <button class="sign-up-btn">
+                        Cadastre-se
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <section class="login-section">
+        <div class="login-box">
+            <h1>Bem-vindo!</h1>
+            <form action="landingpage.html">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="email" placeholder="Confirmar E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Confirmar Senha" required>
+                <button type="submit" class="login-btn">Concluir Cadastro</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

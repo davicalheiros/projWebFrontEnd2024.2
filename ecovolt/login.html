@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ecovolt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div style="display: flex; flex: 1;">
+            <img class="header-logo" src="./assets/images/Group 3.svg">
+        </div>
+        <ul class="header-btns">
+            <li>
+                <a onclick="scrollToSection('inicio')">
+                    <button class="header-btn" href="#inicio">
+                        Início
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a  onclick="scrollToSection('sobre-nos')">
+                    <button class="header-btn">
+                        Sobre Nós
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a  onclick="scrollToSection('porque-nos')">
+                    <button class="header-btn">
+                        Por que nos escolher
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="cadastro.html">
+                    <button class="sign-up-btn">
+                        Cadastre-se
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Seção de Login -->
+    <section class="login-section">
+        <div class="login-box">
+            <h1>Bem-vindo de volta!</h1>
+            <form action="landingpage.html" method="POST">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
