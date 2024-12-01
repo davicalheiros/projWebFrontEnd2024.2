@@ -16,7 +16,7 @@ O site oferece uma **experiência educativa e interativa**, com o objetivo de pr
 
 ### Status do Projeto
 
-- **Fase atual**: Produção da documentação e prototipação.
+- **Fase atual**: Produção do código fonte da página web
 
 ---
 
