@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Ecovolt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/images/Group 3.svg" alt="Logo Ecovolt" class="header-logo">
+        <nav>
+            <ul class="header-btns">
+                <li><a href="landingpage.html" class="header-btn">Início</a></li>
+                <li><a href="landingpage.html#sobre-nos" class="header-btn">Sobre Nós</a></li>
+                <li><a href="landingpage.html#porque-nos" class="header-btn">Por que nos escolher</a></li>
+                <li><a href="cadastro.html" class="sign-up-btn">Cadastre-se</a></li>
+                <li><a href="admin.html" class="header-btn">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-section">
+        <div class="admin-box">
+            <h1>Cadastro de Usuários</h1>
+            <form id="userForm">
+                <input type="text" id="userName" placeholder="Nome do Usuário" required>
+                <input type="email" id="userEmail" placeholder="E-mail" required>
+                <button type="submit" class="admin-btn">Cadastrar</button>
+                <button type="button" class="admin-btn" onclick="clearForm()">Limpar Campos</button>
+            </form>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar por nome ou e-mail">
+                <button type="button" class="admin-btn" onclick="searchUsers()">Pesquisar</button>
+            </div>
+            <ul id="userList"></ul>
+            <button type="button" class="admin-btn delete-all-btn" onclick="deleteAllUsers()">Excluir Todos</button>
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>

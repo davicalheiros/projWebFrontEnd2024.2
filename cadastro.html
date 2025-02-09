@@ -12,37 +12,46 @@
         <nav>
             <ul class="header-btns">
                 <li><a href="landingpage.html" class="header-btn">Início</a></li>
-                <li>
-                    <a  href="landingpage.html#sobre-nos">
-                        <button class="header-btn">
-                            Sobre Nós
-                        </button>
-                    </a>
-                </li>
-                <li>
-                    <a href="landingpage.html#porque-nos">
-                        <button class="header-btn">
-                            Por que nos escolher
-                        </button>
-                    </a>
-                </li>
-                
+                <li><a href="landingpage.html#sobre-nos" class="header-btn">Sobre Nós</a></li>
+                <li><a href="landingpage.html#porque-nos" class="header-btn">Por que nos escolher</a></li>
+                <li><a href="login.html" class="header-btn">Login</a></li>
                 <li><a href="cadastro.html" class="sign-up-btn">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
+
     <section class="login-section">
         <div class="login-box">
             <h1>Bem-vindo!</h1>
-            <form action="landingpage.html">
-                <input type="text" placeholder="Nome Completo" required>
-                <input type="email" placeholder="E-mail" required>
-                <input type="email" placeholder="Confirmar E-mail" required>
-                <input type="password" placeholder="Senha" required>
-                <input type="password" placeholder="Confirmar Senha" required>
+            <form id="cadastroForm">
+                <input type="text" id="nomeCompleto" placeholder="Nome Completo" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="senha" placeholder="Senha" required>
                 <button type="submit" class="login-btn">Concluir Cadastro</button>
             </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const usuario = {
+                nome: nomeCompleto,
+                email: email,
+                senha: senha
+            };
+
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            usuarios.push(usuario);
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
