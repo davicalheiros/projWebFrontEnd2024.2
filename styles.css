@@ -455,3 +455,18 @@ footer li {
 .search-box button {
     width: 80px;
 }
+/* Estilos para o campo de senha na página de admin */
+.admin-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #73CD85;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F4F4F4;
+}
+
+.admin-box input[type="password"]:focus {
+    border-color: #4B995A;
+    outline: none;
+}

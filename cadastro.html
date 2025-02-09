@@ -38,17 +38,18 @@
             const nomeCompleto = document.getElementById('nomeCompleto').value;
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;
-
+    
             const usuario = {
-                nome: nomeCompleto,
+                name: nomeCompleto, // Use "name" para manter consistência com a página de admin
                 email: email,
-                senha: senha
+                password: senha,
+                date: new Date().toLocaleString() // Adiciona a data de cadastro
             };
-
+    
             let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
             usuarios.push(usuario);
             localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+    
             alert('Cadastro realizado com sucesso!');
             window.location.href = 'login.html';
         });

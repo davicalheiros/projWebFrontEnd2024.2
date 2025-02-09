@@ -6,25 +6,27 @@ document.getElementById('userForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const userName = document.getElementById('userName').value;
     const userEmail = document.getElementById('userEmail').value;
-    addUser(userName, userEmail);
+    const userPassword = document.getElementById('userPassword').value;
+    addUser(userName, userEmail, userPassword);
     clearForm();
 });
 
-function addUser(name, email) {
+function addUser(name, email, password) {
     const user = {
         name: name,
         email: email,
+        password: password,
         date: new Date().toLocaleString()
     };
 
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let users = JSON.parse(localStorage.getItem('usuarios')) || [];
     users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('usuarios', JSON.stringify(users));
     loadUsers();
 }
 
 function loadUsers() {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const users = JSON.parse(localStorage.getItem('usuarios')) || [];
     const userList = document.getElementById('userList');
     userList.innerHTML = '';
 
@@ -39,28 +41,30 @@ function loadUsers() {
 }
 
 function deleteUser(index) {
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let users = JSON.parse(localStorage.getItem('usuarios')) || [];
     users.splice(index, 1);
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('usuarios', JSON.stringify(users));
     loadUsers();
 }
 
 function deleteAllUsers() {
-    localStorage.removeItem('users');
+    localStorage.removeItem('usuarios');
     loadUsers();
 }
 
 function clearForm() {
     document.getElementById('userName').value = '';
     document.getElementById('userEmail').value = '';
+    document.getElementById('userPassword').value = '';
 }
 
 function searchUsers() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const users = JSON.parse(localStorage.getItem('usuarios')) || [];
     const filteredUsers = users.filter(user => 
         user.name.toLowerCase().includes(searchTerm) || 
-        user.email.toLowerCase().includes(searchTerm)
+        user.email.toLowerCase().includes(searchTerm) ||
+        user.password.toLowerCase().includes(searchTerm)
     );
 
     const userList = document.getElementById('userList');
